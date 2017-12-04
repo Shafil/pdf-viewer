@@ -141,7 +141,7 @@ Polymer({
     }
     if(newValue > this.pages ) this.page = this.pages;
     if(newValue < 1) this.page = 1;
-    if(this._PDF) this._drawPage();
+    if(Object.keys(this._PDF).length > 0) this._drawPage();
   },
 
   _modeChanged(newValue, oldValue) {
